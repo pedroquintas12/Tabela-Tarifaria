@@ -92,7 +92,14 @@ CREATE DATABASE tarifas
 ```
 
 ### credenciais:
-> Se você já possui PostgreSQL instalado, utilize suas próprias credenciais.
+> Se você já possui PostgreSQL instalado, utilize suas próprias credenciais, atualizando o application-dev.properties.
+
+### altere para as suas credenciais:
+```
+spring.datasource.url=jdbc:postgresql://localhost:5432/tarifas
+spring.datasource.username=postgres
+spring.datasource.password=001305
+```
 
 ## 3 Subir aplicação
 
@@ -112,7 +119,7 @@ docker compose up -d --build
     username: grupo_ras
     password: 123456
 
-## aplicação disponivel em:
+## Aplicação disponivel em:
 http://localhost:8080
 
 ---
@@ -380,7 +387,7 @@ http://localhost:8080/swagger-ui.html
 
 # Executanto testes
 ```terminaloutput
-mvn clean test
+ mvn clean test -Dspring.profiles.active=dev
 ```
 ---
 ## O projeto possui  testes unitários para:
