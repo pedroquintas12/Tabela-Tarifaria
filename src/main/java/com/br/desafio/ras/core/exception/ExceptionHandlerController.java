@@ -33,9 +33,9 @@ public class ExceptionHandlerController {
             BusinessRuleException ex) {
 
         return ResponseEntity
-                .status(HttpStatus.BAD_REQUEST)
+                .status(HttpStatus.CONFLICT)
                 .body(new ErroResponse(
-                        HttpStatus.BAD_REQUEST.value(),
+                        HttpStatus.CONFLICT.value(),
                         ex.getMessage(),
                         LocalDateTime.now()
                 ));
