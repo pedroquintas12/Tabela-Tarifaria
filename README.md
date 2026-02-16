@@ -124,6 +124,14 @@ http://localhost:8080
 
 ---
 
+## Testes via Postman
+
+Importe a coleção localizada em:
+
+`docs/desafio ras.postman_collection.json`
+
+---
+
 # Exemplo de Requests:
 
 A documentação detalhada da API, incluindo todos os códigos de erro e modelos, pode ser acessada via Swagger:

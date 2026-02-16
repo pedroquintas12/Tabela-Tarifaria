@@ -1,0 +1,140 @@
+{
+  "info": {
+    "_postman_id": "8641a541-b673-4f42-a81f-7ed8cd4c8eec",
+    "name": "desafio ras",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21039541",
+    "_collection_link": "https://go.postman.co/collection/21039541-8641a541-b673-4f42-a81f-7ed8cd4c8eec?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Tabela 2026\",\n  \"dataVigenciaInicio\": \"2026-01-01\",\n  \"dataVigenciaFim\": \"2026-12-31\",\n  \"categorias\": [\n    {\n      \"nome\": \"INDUSTRIAL\",\n      \"faixas\": [\n        {\n          \"inicio\": 0,\n          \"fim\": 10,\n          \"valorUnitario\": 1.00\n        },\n        {\n          \"inicio\": 11,\n          \"fim\": 20,\n          \"valorUnitario\": 2.00\n        },\n        {\n          \"inicio\": 21,\n          \"fim\": 99999,\n          \"valorUnitario\": 3.00\n        }\n      ]\n    },\n    {\n      \"nome\": \"COMERCIAL\",\n      \"faixas\": [\n        {\n          \"inicio\": 0,\n          \"fim\": 10,\n          \"valorUnitario\": 1.50\n        },\n        {\n          \"inicio\": 11,\n          \"fim\": 20,\n          \"valorUnitario\": 2.50\n        },\n        {\n          \"inicio\": 21,\n          \"fim\": 99999,\n          \"valorUnitario\": 3.50\n        }\n      ]\n    },\n    {\n      \"nome\": \"PARTICULAR\",\n      \"faixas\": [\n        {\n          \"inicio\": 0,\n          \"fim\": 10,\n          \"valorUnitario\": 0.80\n        },\n        {\n          \"inicio\": 11,\n          \"fim\": 20,\n          \"valorUnitario\": 1.20\n        },\n        {\n          \"inicio\": 21,\n          \"fim\": 99999,\n          \"valorUnitario\": 2.00\n        }\n      ]\n    },\n    {\n      \"nome\": \"PUBLICO\",\n      \"faixas\": [\n        {\n          \"inicio\": 0,\n          \"fim\": 10,\n          \"valorUnitario\": 0.50\n        },\n        {\n          \"inicio\": 11,\n          \"fim\": 20,\n          \"valorUnitario\": 1.00\n        },\n        {\n          \"inicio\": 21,\n          \"fim\": 99999,\n          \"valorUnitario\": 1.50\n        }\n      ]\n    }\n  ]\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/tabelas-tarifarias",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tabelas-tarifarias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/tabelas-tarifarias",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tabelas-tarifarias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleted",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/tabelas-tarifarias/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tabelas-tarifarias",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "calculo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"categoria\":\"INDUSTRIAL\",\n    \"consumo\":18\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/calculos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "calculos"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "URL",
+      "value": ""
+    }
+  ]
+}
